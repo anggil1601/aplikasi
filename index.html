@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>InvestPay</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #0f766e, #d4af37, #8b5e3c);
+      background-size: 400% 400%;
+      animation: gradientMove 15s ease infinite;
+      position: relative;
+    }
+
+    @keyframes gradientMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    body::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: url('https://images.unsplash.com/photo-1609981065951-9012966ac5e3?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=60');
+      background-repeat: repeat;
+      opacity: 0.15;
+      z-index: 0;
+    }
+
+    .content {
+      position: relative;
+      z-index: 10;
+    }
+
+    svg { stroke-width: 1.5; }
+  </style>
+</head>
+<body class="min-h-screen pb-24">
+
+  <div class="content">
+
+    <!-- Header -->
+    <header class="bg-white shadow-lg p-4 flex justify-between items-center rounded-b-3xl">
+      <h1 class="text-xl md:text-2xl font-bold text-teal-700">InvestPay</h1>
+      <div class="flex items-center space-x-3">
+        <span class="text-sm text-gray-600">Hallo</span>
+        <img src="anggil.jpg" class="rounded-full border-2 border-teal-500 w-10 h-10 object-cover" alt="Profile" />
+      </div>
+    </header>
+
+    <!-- Saldo -->
+    <section class="bg-gradient-to-r from-teal-700 to-teal-500 text-white rounded-3xl mx-4 mt-6 p-6 shadow-xl">
+      <p class="text-sm">Saldo Anda</p>
+      <h2 class="text-2xl md:text-3xl font-bold mt-1">Rp 1.250.000</h2>
+      <div class="mt-4 flex flex-col sm:flex-row sm:space-x-4 space-y-3 sm:space-y-0">
+        <a href="top up.html" class="bg-white text-teal-700 px-5 py-2 rounded-xl font-semibold shadow-md hover:bg-gray-100 transition text-center">Top Up</a>
+        <a href="witdraw.html" class="bg-white text-teal-700 px-5 py-2 rounded-xl font-semibold shadow-md hover:bg-gray-100 transition text-center">Withdraw</a>
+      </div>
+    </section>
+
+    <!-- Menu (scrollable) -->
+    <section class="mt-8 mx-4 overflow-x-auto">
+      <div class="flex space-x-4">
+
+        <!-- Scan QR -->
+        <a href="barcode.html" class="bg-white p-4 rounded-2xl shadow-lg hover:shadow-xl transition min-w-[90px] flex-shrink-0 text-center">
+          <svg xmlns="http://www.w3.org/2000/svg" class="mx-auto w-8 h-8 text-teal-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 4h6v6H4V4zm10 0h6v6h-6V4zm-10 10h6v6H4v-6zm10 0h6v6h-6v-6z"/>
+          </svg>
+          <p class="text-xs mt-2">Scan QR</p>
+        </a>
+
+        <!-- Transfer -->
+        <a href="transfer.html" class="bg-white p-4 rounded-2xl shadow-lg hover:shadow-xl transition min-w-[90px] flex-shrink-0 text-center">
+          <svg xmlns="http://www.w3.org/2000/svg" class="mx-auto w-8 h-8 text-teal-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 17v1a2 2 0 002 2h12a2 2 0 002-2v-1M7 9l5-5 5 5M12 4v12"/>
+          </svg>
+          <p class="text-xs mt-2">Transfer</p>
+        </a>
+
+        <!-- Investasi -->
+        <a href="investasi.html" class="bg-white p-4 rounded-2xl shadow-lg hover:shadow-xl transition min-w-[90px] flex-shrink-0 text-center">
+          <svg xmlns="http://www.w3.org/2000/svg" class="mx-auto w-8 h-8 text-teal-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3 17l6-6 4 4 8-8"/>
+          </svg>
+          <p class="text-xs mt-2">Investasi</p>
+        </a>
+
+        <!-- Histori -->
+        <a href="histori.html" class="bg-white p-4 rounded-2xl shadow-lg hover:shadow-xl transition min-w-[90px] flex-shrink-0 text-center">
+          <svg xmlns="http://www.w3.org/2000/svg" class="mx-auto w-8 h-8 text-teal-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
+          <p class="text-xs mt-2">Histori</p>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- Investasi -->
+    <section class="bg-white rounded-3xl mx-4 mt-8 p-6 shadow-lg">
+      <h3 class="font-bold text-gray-800 mb-4">Investasi Kamu</h3>
+      <div>
+        <p class="text-sm text-gray-600">Keuntungan hari ini</p>
+        <h4 class="text-lg md:text-xl font-semibold text-green-600 mt-1">+Rp 15.000</h4>
+      </div>
+      <div class="mt-4 bg-gray-200 rounded-full h-3">
+        <div class="bg-teal-500 h-3 rounded-full" style="width: 45%"></div>
+      </div>
+    </section>
+
+    <!-- Produk Investasi Populer -->
+    <section class="mt-8 mx-4">
+      <h3 class="font-bold text-gray-800 mb-4">Produk Investasi Populer</h3>
+      <div class="overflow-x-auto">
+        <div class="flex space-x-4">
+          <!-- Reksadana -->
+          <div class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition p-4 min-w-[200px]">
+            <h4 class="font-semibold text-teal-700">Reksadana Pasar Uang</h4>
+            <p class="text-sm text-gray-600 mt-2">Return 5-6% / tahun</p>
+            <button class="mt-4 bg-teal-600 text-white px-4 py-2 rounded-xl w-full hover:bg-teal-700 transition">Investasi</button>
+          </div>
+          <!-- Obligasi -->
+          <div class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition p-4 min-w-[200px]">
+            <h4 class="font-semibold text-teal-700">Obligasi Negara</h4>
+            <p class="text-sm text-gray-600 mt-2">Return 6-7% / tahun</p>
+            <button class="mt-4 bg-teal-600 text-white px-4 py-2 rounded-xl w-full hover:bg-teal-700 transition">Investasi</button>
+          </div>
+          <!-- Emas -->
+          <div class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition p-4 min-w-[200px]">
+            <h4 class="font-semibold text-teal-700">Emas Digital</h4>
+            <p class="text-sm text-gray-600 mt-2">Return 4-5% / tahun</p>
+            <button class="mt-4 bg-teal-600 text-white px-4 py-2 rounded-xl w-full hover:bg-teal-700 transition">Investasi</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bottom Navigation -->
+    <nav class="fixed bottom-4 left-1/2 transform -translate-x-1/2 bg-white shadow-2xl rounded-full px-4 py-2 flex justify-around w-11/12 max-w-md">
+      <!-- Home -->
+      <a href="#" class="flex flex-col items-center text-teal-700 hover:text-teal-800 transition">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mb-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3 12l9-9 9 9v8a2 2 0 01-2 2h-4a2 2 0 01-2-2v-4H9v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-8z"/>
+        </svg>
+        <span class="text-xs">Home</span>
+      </a>
+      <!-- Scan -->
+      <a href="#" class="flex flex-col items-center text-gray-600 hover:text-teal-700 transition">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mb-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M5 3v4H3V3a2 2 0 012-2h4v2H5zm14 0h-4v2h4v4h2V3a2 2 0 00-2-2zm0 18h-4v2h4a2 2 0 002-2v-4h-2v4zM5 21h4v2H5a2 2 0 01-2-2v-4h2v4z"/>
+        </svg>
+        <span class="text-xs">Scan</span>
+      </a>
+      <!-- Invest -->
+      <a href="#" class="flex flex-col items-center text-gray-600 hover:text-teal-700 transition">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mb-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M11 11V7a4 4 0 118 0v4a4 4 0 11-8 0zM5 12h14M12 15v4m0 0h-3m3 0h3"/>
+        </svg>
+        <span class="text-xs">Invest</span>
+      </a>
+      <!-- Profile -->
+      <a href="#" class="flex flex-col items-center text-gray-600 hover:text-teal-700 transition">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mb-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M5.121 17.804A12 12 0 0112 2a12 12 0 016.879 15.804M12 14a4 4 0 100-8 4 4 0 000 8zm0 2c-2.667 0-8 1.333-8 4v2h16v-2c0-2.667-5.333-4-8-4z"/>
+        </svg>
+        <span class="text-xs">Profil</span>
+      </a>
+    </nav>
+
+  </div>
+
+</body>
+</html>

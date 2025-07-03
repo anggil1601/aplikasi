@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Withdraw - InvestPay</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Poppins', sans-serif; }
+    input:focus { outline: none; }
+  </style>
+</head>
+<body class="bg-gray-50 min-h-screen pb-24">
+
+  <!-- Header -->
+  <header class="bg-white shadow-lg p-4 flex justify-between items-center rounded-b-3xl">
+    <h1 class="text-xl md:text-2xl font-bold text-teal-700">Withdraw</h1>
+    <a href="index.html" class="text-sm text-teal-600 hover:text-teal-800 transition">Kembali</a>
+  </header>
+
+  <!-- Form Withdraw -->
+  <main class="mx-4 mt-8">
+    <section class="bg-white rounded-3xl p-6 shadow-lg">
+      <h2 class="text-lg font-bold text-gray-800 mb-4">Tarik Saldo</h2>
+      
+      <form action="#" method="POST" class="space-y-4">
+        <div>
+          <label for="nominal" class="text-sm text-gray-600">Nominal Withdraw</label>
+          <input type="number" id="nominal" name="nominal" placeholder="Masukkan jumlah..." class="mt-1 w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-teal-400">
+        </div>
+
+        <div>
+          <label for="rekening" class="text-sm text-gray-600">Rekening Tujuan</label>
+          <input type="text" id="rekening" name="rekening" placeholder="Masukkan no. rekening..." class="mt-1 w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-teal-400">
+        </div>
+
+        <button type="submit" class="w-full bg-teal-600 text-white px-4 py-3 rounded-xl font-semibold hover:bg-teal-700 transition">Withdraw Sekarang</button>
+      </form>
+    </section>
+  </main>
+
+</body>
+</html>
